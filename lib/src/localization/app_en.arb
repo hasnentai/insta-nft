@@ -1,0 +1,6 @@
+{
+  "appTitle": "insta_nft",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
