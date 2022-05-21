@@ -1,0 +1,28 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "v",
+                "type": "uint256"
+            }
+        ],
+        "name": "addVal",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "displayHello",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

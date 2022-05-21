@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:insta_nft/src/instagram_auth/instagram_constant.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class InstagramModel {
   List<String> userFields = ['id', 'username'];
@@ -17,6 +18,13 @@ class InstagramModel {
         .replaceAll('#_', '');
   }
 
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
+  Future<void> setToken(String? token) async {
+    final SharedPreferences prefs = await _prefs;
+    prefs.setString('token', token!);
+  }
+
   Future<bool> getTokenAndUserID() async {
     var url = Uri.parse('https://api.instagram.com/oauth/access_token');
     final response = await http.post(url, body: {
@@ -28,6 +36,7 @@ class InstagramModel {
     });
     accessToken = json.decode(response.body)['access_token'];
     print(accessToken);
+    setToken(accessToken);
     userID = json.decode(response.body)['user_id'].toString();
     return (accessToken != null && userID != null) ? true : false;
   }

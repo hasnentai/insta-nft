@@ -3,10 +3,15 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:insta_nft/src/instagram_auth/instagram_constant.dart';
 import 'package:insta_nft/src/instagram_auth/instagram_model.dart';
 
-class InstagramView extends StatelessWidget {
+class InstagramView extends StatefulWidget {
   const InstagramView({Key? key}) : super(key: key);
   static const routeName = '/instagram-login';
 
+  @override
+  State<InstagramView> createState() => _InstagramViewState();
+}
+
+class _InstagramViewState extends State<InstagramView> {
   @override
   Widget build(BuildContext context) {
     return Builder(builder: (context) {
@@ -28,15 +33,15 @@ class InstagramView extends StatelessWidget {
     webview.onUrlChanged.listen((String url) async {
       if (url.contains(InstagramConstant.redirectUri)) {
         instagram.getAuthorizationCode(url);
-        await instagram.getTokenAndUserID().then((isDone) {
-          if (isDone) {
-            instagram.getUserProfile().then((isDone) async {
-              await webview.close();
-
-              print('${instagram.username} logged in!');
-            });
-          }
-        });
+        if (url.contains('${InstagramConstant.redirectUri}?code=')) {
+          await instagram.getTokenAndUserID().then((isDone) {
+            if (isDone) {
+              instagram.getUserProfile().then((isDone) async {
+                await webview.close();
+              });
+            }
+          });
+        }
       }
     });
   }

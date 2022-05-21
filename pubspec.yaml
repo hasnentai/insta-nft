@@ -2,7 +2,7 @@ name: insta_nft
 description: A new Flutter project.
 
 # Prevent accidental publishing to pub.dev.
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -16,13 +16,18 @@ dependencies:
     sdk: flutter
   flutter_webview_plugin: ^0.4.0
   http: ^0.13.4
+  qr_flutter: ^4.0.0
   shared_preferences: ^2.0.15
+  url_launcher: ^6.1.2
+  walletconnect_dart: ^0.0.10
+  web3dart: ^2.3.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  build_runner: ^2.1.11
 
 flutter:
   uses-material-design: true

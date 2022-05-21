@@ -7,9 +7,9 @@ class InstagramConstant {
 
   InstagramConstant._init();
 
-  static const String clientID = '718353975697969';
-  static const String appSecret = '5497481e4a4ab34ae4fc2eeb4e6b7dba';
-  static const String redirectUri = 'https://www.ekspar.com.tr/';
+  static const String clientID = '4737350229702811';
+  static const String appSecret = '9c66c7bc96046e3ae402ae071df809a9';
+  static const String redirectUri = 'https://httpstat.us/200';
   static const String scope = 'user_profile,user_media';
   static const String responseType = 'code';
   final String url =
