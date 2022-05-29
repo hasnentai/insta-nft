@@ -15,7 +15,9 @@ To make this project work you need to have 3 API keys of your own.
 
 ## App Screen shots
 
-![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20.png)
+<img src="https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red.png" height="500">
+
+![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red.png)
 
 ![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(5).png)
 
@@ -26,4 +28,3 @@ To make this project work you need to have 3 API keys of your own.
 ![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(2).png)
 
 ![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(1).png)
-
