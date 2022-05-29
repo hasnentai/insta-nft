@@ -51,9 +51,14 @@ class EthereumTransactionTester extends TransactionTester {
     required this.provider,
   }) : super(connector: connector);
 
+  //**
+  // Infura ID from https://infura.io/
+  // */
   factory EthereumTransactionTester() {
     final ethereum = Web3Client(
-      'https://rinkeby.infura.io/v3/c0b4a1b1968841f5aae521f3846903f0',
+      '',
+
+      /// Infura ID
       Client(),
     );
 
