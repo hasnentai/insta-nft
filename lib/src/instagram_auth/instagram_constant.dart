@@ -7,8 +7,12 @@ class InstagramConstant {
 
   InstagramConstant._init();
 
-  static const String clientID = '4737350229702811';
-  static const String appSecret = '9c66c7bc96046e3ae402ae071df809a9';
+  //**
+  /// Get the [ClientID] from facebook aka meta developer deshboard
+  /// Get the [appSecret] from facebook aka meta developer deshboard
+  // */
+  static const String clientID = '';
+  static const String appSecret = '';
   static const String redirectUri = 'https://httpstat.us/200';
   static const String scope = 'user_profile,user_media';
   static const String responseType = 'code';

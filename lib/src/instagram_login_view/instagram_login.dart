@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:insta_nft/src/instagram_auth/instagram_constant.dart';
 import 'package:insta_nft/src/instagram_auth/instagram_model.dart';
+import 'package:insta_nft/src/instagram_photos/instagram_photo_view.dart';
+import 'package:insta_nft/src/landing/landing.dart';
+import 'package:insta_nft/src/mint_form/mint_form_view.dart';
 
 class InstagramView extends StatefulWidget {
   const InstagramView({Key? key}) : super(key: key);
@@ -38,6 +41,9 @@ class _InstagramViewState extends State<InstagramView> {
             if (isDone) {
               instagram.getUserProfile().then((isDone) async {
                 await webview.close();
+                await Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const MintFormView()),
+                );
               });
             }
           });
@@ -49,7 +55,7 @@ class _InstagramViewState extends State<InstagramView> {
   AppBar buildAppBar(BuildContext context) => AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         title: Text(
           'Instagram Login',
           style: Theme.of(context)

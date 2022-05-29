@@ -52,14 +52,17 @@ class EthereumTransactionTester extends TransactionTester {
   }) : super(connector: connector);
 
   factory EthereumTransactionTester() {
-    final ethereum = Web3Client('https://ropsten.infura.io/', Client());
+    final ethereum = Web3Client(
+      'https://rinkeby.infura.io/v3/c0b4a1b1968841f5aae521f3846903f0',
+      Client(),
+    );
 
     final connector = WalletConnect(
       bridge: 'https://bridge.walletconnect.org',
       clientMeta: const PeerMeta(
-        name: 'WalletConnect',
-        description: 'WalletConnect Developer App',
-        url: 'https://walletconnect.org',
+        name: 'Insta NFT',
+        description: 'Insta NFT Developer App',
+        url: 'https://MyInstaNFT.org',
         icons: [
           'https://gblobscdn.gitbook.com/spaces%2F-LJJeCjcLrr53DcT1Ml7%2Favatar.png?alt=media'
         ],

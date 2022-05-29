@@ -1,12 +1,14 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:insta_nft/src/instagram_auth/ig_user_media_model.dart';
 import 'package:insta_nft/src/instagram_auth/instagram_constant.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class InstagramModel {
   List<String> userFields = ['id', 'username'];
-
+  var completer = Completer<IgUserMedia>();
   String? authorizationCode;
   String? accessToken;
   String? userID;
@@ -51,6 +53,20 @@ class InstagramModel {
     };
     username = json.decode(responseNode.body)['username'];
     print('username: $username');
-    return instaProfile != null ? true : false;
+    return instaProfile.isNotEmpty ? true : false;
+  }
+
+  Future<IgUserMedia> getUserMedia(String? accessToken) async {
+    IgUserMedia igUserMedia = IgUserMedia();
+    final response = await http.get(Uri.parse(
+        'https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,thumbnail_url,media_type&access_token=${accessToken!}'));
+    if (response.statusCode == 200) {
+      var data = jsonDecode(response.body);
+      igUserMedia = IgUserMedia.fromJson(data);
+    } else {
+      print('Somthing went wrong');
+    }
+
+    return igUserMedia;
   }
 }
