@@ -17,14 +17,12 @@ To make this project work you need to have 3 API keys of your own.
 
 <img src="https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red.png" height="500">
 
-![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red.png)
+<img src="https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(5)" height="500">
 
-![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(5).png)
+<img src="https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(4)" height="500">
 
-![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(4).png)
+<img src="https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(3)" height="500">
 
-![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(3).png)
+<img src="https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(2)" height="500">
 
-![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(2).png)
-
-![alt text](https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(1).png)
+<img src="https://github.com/hasnentai/insta-nft/blob/main/images/Apple%20iPhone%20XR%20Red%20(1)" height="500">
