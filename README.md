@@ -1,6 +1,6 @@
 # insta_nft
 
-This is a demo application which connverts instagram post to ERC721 NFT
+This is a demo application which converts instagram post to ERC721 nft
 
 ## Getting Started
 
